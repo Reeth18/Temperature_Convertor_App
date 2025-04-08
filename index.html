@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Convertor App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="rb-temp-container">
+      <div class="rb-temp-inner-container">
+        <h1>Convert Temperature</h1>
+        <div class="temp-card">
+          <div class="from">
+            <label for="fromUnit">From:</label>
+            <select id="fromUnit" onchange="restrictSameSelection()">
+              <option value="">Choose Below:</option>
+              <option value="C">Celsius</option>
+              <option value="F">Fahrenheit</option>
+              <option value="K">Kelvin</option>
+            </select>
+          </div>
+          <div class="to">
+            <label for="toUnit">To:</label>
+            <select id="toUnit" onchange="restrictSameSelection()">
+              <option value="">Choose Below:</option>
+              <option value="C">Celsius</option>
+              <option value="F">Fahrenheit</option>
+              <option value="K">Kelvin</option>
+            </select>
+          </div>
+          <h2>Enter Value</h2>
+          <div class="value">
+            <input
+              type="text"
+              id="temperature"
+              placeholder="Enter Temperature"
+            />
+            <span id="fromUnitLabel"></span>
+            <button onclick="convertTemperature()">Convert</button>
+          </div>
+          <h2>Converted Value</h2>
+          <div class="result">
+            <input type="text" id="result" disabled />
+            <span id="toUnitLabel"></span>
+            <button onclick="clearFields()">CLR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS Code -->
+    <script src="/script.js"></script>
+  </body>
+</html>
